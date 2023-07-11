@@ -9,7 +9,7 @@ import {
     signInWithGoogleRedirect,
 } from '../../utils/firebase/firebase.utils';
 
-import './authentication.styles.scss';
+import { AuthenticationContainer } from './authentication.styles';
 
 const Authentication = () => {
     // useEffect(async () => {
@@ -27,11 +27,11 @@ const Authentication = () => {
     // };
 
     return (
-        <div className="authentication-container">
+        <AuthenticationContainer>
             <SignInForm />
 
             <SignUpForm />
-        </div>
+        </AuthenticationContainer>
     );
 };
 export default Authentication;

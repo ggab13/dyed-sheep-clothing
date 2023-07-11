@@ -2,13 +2,13 @@ import { useContext, Fragment } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';
 //import ProductCard from '../../components/product-card/product-card.component';
 import CategoryPreview from '../../components/category-preview/category-preview.component';
-import './categories-preview.styles.scss';
+import { PreviewContainer, Preview, Title } from './categories-preview.styles';
 
 const CategoriesPreview = () => {
     const { categoriesMap } = useContext(CategoriesContext);
 
     return (
-        <div className="category-preview-container">
+        <PreviewContainer>
             {Object.keys(categoriesMap).map((title) => {
                 const products = categoriesMap[title];
                 return (
@@ -19,7 +19,7 @@ const CategoriesPreview = () => {
                     />
                 );
             })}
-        </div>
+        </PreviewContainer>
         /*    <Fragment>
             {Object.keys(categoriesMap).map((title) => (
                 <Fragment>
