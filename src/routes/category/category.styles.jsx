@@ -7,3 +7,10 @@ export const CategoryContainer = styled.div`
     column-gap: 20px;
     row-gap: 30px;
 `;
+
+export const Title = styled.div`
+    margin: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+`;

@@ -1,4 +1,5 @@
 import { useState, createContext, useEffect, useReducer } from 'react';
+import { createAction } from '../utils/reducer/reducer.utils';
 
 const addCartItem = (cartItems, productToAdd) => {
     // find if cartItems contains productToAdd
@@ -79,6 +80,9 @@ export const CartContext = createContext({
 
 export const CART_ACTION_TYPE = {
     SET_CART_ITEMS: 'SET_CART_ITEMS',
+    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
+    SET_CART_COUNT: 'SET_CART_COUNT',
+    SET_CART_TOTAL: 'SET_CART_TOTAL',
 };
 
 const INITIAL_STATE = {
