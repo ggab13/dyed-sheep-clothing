@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import ProductCard from '../product-card/product-card.component';
 import './category-preview.styles';
 import { PreviewContainer, Preview, Title } from './category-preview.styles';
+import Spinner from '../spinner/spinner.component';
+import { selectCategoriesIsLoading } from '../../store/categories/category.selector';
 const CategoryPreview = ({ title, products }) => {
+    const isLoading = useSelector(selectCategoriesIsLoading);
     return (
         <PreviewContainer>
             <h2>
